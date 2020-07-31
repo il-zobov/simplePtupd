@@ -1,0 +1,7 @@
+#!/bin/bash
+
+./sptcmd --enable
+
+./a.out
+
+./sptcmd --disable

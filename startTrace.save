@@ -1,0 +1,15 @@
+#!/bin/bash
+    
+	T=/sys/kernel/debug/tracing
+        echo 1 > $T/events/pttp/msr/enable
+        echo 1 > $T/events/pttp/exec_cr3/enable
+        echo 1 > $T/events/pttp/mmap_cr3/enable
+        echo 1 > $T/events/pttp/process_cr3/enable
+	ls
+	./sptdump ls
+        echo 0 > $T/events/pttp/msr/enable
+        echo 0 > $T/events/pttp/exec_cr3/enable
+        echo 0 > $T/events/pttp/mmap_cr3/enable
+        echo 0 > $T/events/pttp/process_cr3/enable
+
+
